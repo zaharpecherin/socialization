@@ -95,11 +95,12 @@ module Socialization
         # Returns all the likeables of a certain type that are liked by liker
         def likeables(liker, klass, opts = {})
           rel = likeables_relation(liker, klass, opts)
-          if rel.is_a?(ActiveRecord::Relation)
-            rel.to_a
-          else
-            rel
-          end
+          # if rel.is_a?(ActiveRecord::Relation)
+          #   rel.to_a
+          # else
+          #   rel
+          # end
+          rel
         end
 
         # Remove all the likers for likeable
